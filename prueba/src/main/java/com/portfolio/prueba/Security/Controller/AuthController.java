@@ -2,9 +2,9 @@
 package com.portfolio.prueba.Security.Controller;
 
 import com.portfolio.prueba.Dto.Mensaje;
-import com.portfolio.prueba.Security.Entity.Dto.JwtDto;
-import com.portfolio.prueba.Security.Entity.Dto.LoginUsuario;
-import com.portfolio.prueba.Security.Entity.Dto.NuevoUsuario;
+import com.portfolio.prueba.Security.Dto.JwtDto;
+import com.portfolio.prueba.Security.Dto.LoginUsuario;
+import com.portfolio.prueba.Security.Dto.NuevoUsuario;
 import com.portfolio.prueba.Security.Entity.Rol;
 import com.portfolio.prueba.Security.Entity.Usuario;
 import com.portfolio.prueba.Security.Enums.RolNombre;

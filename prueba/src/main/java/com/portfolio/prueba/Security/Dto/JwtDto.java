@@ -1,5 +1,5 @@
 
-package com.portfolio.prueba.Security.Entity.Dto;
+package com.portfolio.prueba.Security.Dto;
 
 import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;

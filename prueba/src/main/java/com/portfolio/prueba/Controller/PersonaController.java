@@ -27,19 +27,23 @@ public class PersonaController {
     @GetMapping("/traer")
     public List<Persona> getPersona() {
         return ipersonaService.getPersona();
-        
+    }
+    
+    @GetMapping(path = {"/traer/{id}"})
+    public Persona findPersona(@PathVariable("id")long id){
+        return ipersonaService.findPersona(id);
     }
     
     @PostMapping("/crear")
-    public String createPersona(@RequestBody Persona pers){
+    public void createPersona(@RequestBody Persona pers){
         ipersonaService.savePersona(pers);
-        return "La persona fue creada correctamente";
+        //return "La persona fue creada correctamente";
     }
     
     @DeleteMapping("/borrar/{id}")
-    public String deletePersona(@PathVariable Long id) {
+    public void deletePersona(@PathVariable Long id) {
         ipersonaService.deletePersona(id);
-        return "La persona fue eliminada correctamente";
+        //return "La persona fue eliminada correctamente";
     }
     
     //URL puerto/Personas/editar/
