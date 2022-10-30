@@ -10,7 +10,7 @@ public interface IHeadersService {
     public List<Headers> getHeaders();
     
     
-    public void saveHeaders (Headers edu);
+    public void saveHeaders (Headers head);
     
     
     public void deleteHeaders (Long id);

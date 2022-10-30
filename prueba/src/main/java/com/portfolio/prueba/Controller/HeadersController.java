@@ -29,8 +29,8 @@ public class HeadersController {
     
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
-    public void createHeaders(@RequestBody Headers edu){
-        iheadersService.saveHeaders(edu);
+    public void createHeaders(@RequestBody Headers head){
+        iheadersService.saveHeaders(head);
        // return "El elemento fue creado correctamente";
         
     }

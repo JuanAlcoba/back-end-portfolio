@@ -21,8 +21,8 @@ public class ImpHeadersService implements IHeadersService{
     }
 
     @Override
-    public void saveHeaders(Headers edu) {
-        iheadersrepository.save(edu);
+    public void saveHeaders(Headers head) {
+        iheadersrepository.save(head);
     }
 
     @Override
