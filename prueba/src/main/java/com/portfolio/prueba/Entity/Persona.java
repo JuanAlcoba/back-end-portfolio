@@ -15,7 +15,7 @@ import lombok.Setter;
 @Getter @Setter
 @Entity
 public class Persona {
-    
+   
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,7 +34,7 @@ public class Persona {
     
     private String img;
     @NotNull
-    @Size(min = 1, max = 500, message = "no cumple con la longitud")
+    @Size(min = 1, max = 1000, message = "no cumple con la longitud")
     private String acerca;
     
     

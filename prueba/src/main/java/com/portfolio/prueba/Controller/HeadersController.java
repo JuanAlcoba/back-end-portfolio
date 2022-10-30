@@ -1,8 +1,8 @@
 
 package com.portfolio.prueba.Controller;
 
-import com.portfolio.prueba.Entity.Educacion;
-import com.portfolio.prueba.Interface.IEducacionService;
+import com.portfolio.prueba.Entity.Headers;
+import com.portfolio.prueba.Interface.IHeadersService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -17,20 +17,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping ("/educacion")
+@RequestMapping ("/headers")
 @CrossOrigin (origins = "http://localhost:4200")
-public class EducacionController {
-    @Autowired IEducacionService ieducacionService;
+public class HeadersController {
+    @Autowired IHeadersService iheadersService;
     
     @GetMapping("/traer")
-    public List<Educacion> getEducacion(){
-        return ieducacionService.getEducacion();
+    public List<Headers> getHeaders(){
+    return iheadersService.getHeaders();
     }
     
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
-    public void createEducacion(@RequestBody Educacion edu){
-        ieducacionService.saveEducacion(edu);
+    public void createHeaders(@RequestBody Headers edu){
+        iheadersService.saveHeaders(edu);
        // return "El elemento fue creado correctamente";
         
     }
@@ -42,29 +42,29 @@ public class EducacionController {
     
     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/eliminar/{id}")
-    public void deleteEducacion(@PathVariable Long id){
-        ieducacionService.deleteEducacion(id);
+    public void deleteHeaders(@PathVariable Long id){
+        iheadersService.deleteHeaders(id);
         // return "El elemento fue eliminado correctamente";
         
     }
     
     /* @DeleteMapping(path = {"/{id}"})
-        public Educacion borrarEducacion(@PathVariable ("id") Long id){
-            return ieducacionService.borrarEducacion(id);
+        public Headers borrarHeaders(@PathVariable ("id") Long id){
+            return iheadersService.borrarHeaders(id);
         }
     */
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/editar/{id}")
-    public Educacion editarEducacion(@PathVariable("id") Long id,
-            @RequestBody Educacion educacion) {
-        educacion.setId(id);
-        ieducacionService.saveEducacion(educacion);
-        return educacion;
+    public Headers editarHeaders(@PathVariable("id") Long id,
+            @RequestBody Headers headers) {
+        headers.setId(id);
+        iheadersService.saveHeaders(headers);
+        return headers;
     }
-    
+  
     @GetMapping(path = {"/{id}"})
-    public Educacion listarId(@PathVariable ("id") Long id){
-    return ieducacionService.findEducacion(id);
+    public Headers listarId(@PathVariable ("id") Long id){
+    return iheadersService.findHeaders(id);
     }
 }
