@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping ("/headers")
-@CrossOrigin (origins = "http://localhost:4200")
+@CrossOrigin (origins = "*")
 public class HeadersController {
     @Autowired IHeadersService iheadersService;
     

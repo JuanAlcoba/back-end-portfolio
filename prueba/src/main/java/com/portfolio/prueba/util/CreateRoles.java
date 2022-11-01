@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
  *
  */
 
-/** 
- * @Component
+/**
+@Component
 public class CreateRoles implements CommandLineRunner {
 
     @Autowired
@@ -32,4 +32,4 @@ public class CreateRoles implements CommandLineRunner {
          
     }
 }
-**/
+*/
